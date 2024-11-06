@@ -1,0 +1,107 @@
+/* General body styling */
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #c9d6ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  margin: 0;
+}
+
+.container {
+  background-color: white;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  width: 400px;
+  max-width: 90%;
+}
+
+/* Hide all radio buttons (used for controlling steps) */
+input[type="radio"] {
+  display: none;
+}
+
+/* Show only the active form step */
+.form-step {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+/* Display step 1 when step1 radio is checked */
+#step1:checked ~ .step1 {
+  display: block;
+  opacity: 1;
+}
+
+/* Display step 2 when step2 radio is checked */
+#step2:checked ~ .step2 {
+  display: block;
+  opacity: 1;
+}
+
+/* Display step 3 when step3 radio is checked */
+#step3:checked ~ .step3 {
+  display: block;
+  opacity: 1;
+}
+
+/* Input field styling */
+input[type="text"],
+input[type="email"],
+input[type="date"],
+input[type="tel"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+/* Restore visibility of sex radio buttons */
+input[name="sex"] {
+  display: inline-block;
+  margin: 0 5px;
+}
+
+/* Button styling */
+button {
+  padding: 10px 20px;
+  background-color: #8a2be2;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #ff6f91;
+}
+
+/* Align buttons to be in the same row */
+.prev-button,
+.next-button {
+  display: inline-block;
+}
+
+/* Submit button styling */
+.submit-button {
+  background-color: #8a2be2;
+  color: white;
+  padding: 10px 20px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.submit-button:hover {
+  background-color: #ff6f91;
+}
